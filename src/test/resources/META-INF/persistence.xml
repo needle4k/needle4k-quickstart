@@ -6,8 +6,8 @@
     <persistence-unit name="TestDataModel" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
-        <class>org.needle4k.quickstart.user.Person</class>
-        <class>org.needle4k.quickstart.user.Address</class>
+        <class>io.github.needle4k.quickstart.user.Person</class>
+        <class>io.github.needle4k.quickstart.user.Address</class>
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbc.JDBCDriver"/>
@@ -29,8 +29,8 @@
     <persistence-unit name="DerbyModel" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
-        <class>org.needle4k.quickstart.user.Person</class>
-        <class>org.needle4k.quickstart.user.Address</class>
+        <class>io.github.needle4k.quickstart.user.Person</class>
+        <class>io.github.needle4k.quickstart.user.Address</class>
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver"/>
