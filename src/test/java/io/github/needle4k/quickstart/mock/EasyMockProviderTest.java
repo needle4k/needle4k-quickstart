@@ -2,7 +2,6 @@ package io.github.needle4k.quickstart.mock;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertNull;
 import static io.github.needle4k.configuration.ConfigurationLoaderKt.MOCK_PROVIDER_KEY;
 
 import java.util.Map;
