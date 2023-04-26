@@ -17,11 +17,11 @@ import io.github.needle4k.mock.MockProvider;
 
 import jakarta.inject.Inject;
 
-@SuppressWarnings("ResultOfMethodCallIgnored")
+@SuppressWarnings({  "CdiInjectionPointsInspection" })
 public class EasyMockProviderTest
 {
   @RegisterExtension
-  private static final NeedleExtension needleExtension = new NeedleExtension()
+  public static final NeedleExtension needleExtension = new NeedleExtension()
   {
     protected void configure()
     {

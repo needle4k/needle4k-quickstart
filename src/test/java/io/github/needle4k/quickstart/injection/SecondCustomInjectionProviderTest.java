@@ -21,7 +21,7 @@ public class SecondCustomInjectionProviderTest
   private CustomInjectionTestComponent component;
 
   @RegisterExtension
-  private static final NeedleExtension needleExtension = new NeedleExtension()
+  public static final NeedleExtension needleExtension = new NeedleExtension()
   {
     // CustomInjectionAnnotation1 is added by needle.properties already
     protected void configure()

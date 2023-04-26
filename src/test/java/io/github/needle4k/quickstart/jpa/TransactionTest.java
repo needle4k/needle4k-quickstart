@@ -35,25 +35,22 @@ public class TransactionTest
   {
     final EntityManager entityManager1 = transactionHelper1.getEntityManager();
 
-    try (EntityManager entityManager2 = configuration.getEntityManagerFactory().createEntityManager())
+    try (final EntityManager entityManager2 = configuration.getEntityManagerFactory().createEntityManager())
     {
-
       final Person person = new Person("demo", new Address("Bülowstr. 66", "10783 Berlin"));
       entityManager1.persist(person);
 
       final Person personFromDB = entityManager2.find(Person.class, person.getId());
       assertThat(personFromDB).isNull();
     }
-
   }
 
   @Test
   public void withTransactionsEverythingIsFine()
   {
-    try (EntityManager entityManager2 = configuration.getEntityManagerFactory().createEntityManager())
+    try (final EntityManager entityManager2 = configuration.getEntityManagerFactory().createEntityManager())
     {
       final TransactionHelper transactionHelper2 = new TransactionHelper(entityManager2);
-
       final Person person = transactionHelper1.saveObject(new Person("demo", new Address("Bülowstr. 66", "10783 Berlin")));
       final Person personFromDB = transactionHelper2.loadObject(Person.class, person.getId());
 

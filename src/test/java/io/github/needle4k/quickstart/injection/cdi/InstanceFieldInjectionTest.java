@@ -12,6 +12,7 @@ import io.github.needle4k.junit5.NeedleExtension;
 import jakarta.enterprise.inject.Instance;
 import jakarta.inject.Inject;
 
+@SuppressWarnings("AssertBetweenInconvertibleTypes")
 @ExtendWith(NeedleExtension.class)
 public class InstanceFieldInjectionTest {
 

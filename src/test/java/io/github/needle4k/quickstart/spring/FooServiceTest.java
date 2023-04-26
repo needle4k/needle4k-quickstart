@@ -2,6 +2,7 @@ package io.github.needle4k.quickstart.spring;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.RegisterExtension;
 import io.github.needle4k.annotation.ObjectUnderTest;
@@ -16,7 +17,7 @@ import io.github.needle4k.junit5.NeedleExtension;
 public class FooServiceTest
 {
   @RegisterExtension
-  private static final NeedleExtension needleExtension = new NeedleExtension(new FormatterInjectionProvider(new FooFormatter()));
+  public static final NeedleExtension needleExtension = new NeedleExtension(new FormatterInjectionProvider(new FooFormatter()));
 
   @ObjectUnderTest
   private FooService fooService;
@@ -36,11 +37,12 @@ public class FooServiceTest
     }
 
     @Override
-    public Formatter getInjectedObject(final Class<?> injectionTargetType)
+    public Formatter getInjectedObject(@NotNull final Class<?> injectionTargetType)
     {
       return instance;
     }
 
+    @NotNull
     @Override
     public Object getKey(final InjectionTargetInformation<?> injectionTargetInformation)
     {

@@ -12,7 +12,7 @@ import io.github.needle4k.junit5.NeedleExtension;
  * See declaration of injection provider in needle.properties file.
  */
 @ExtendWith(NeedleExtension.class)
-public class CustomInjectionProviderTest1
+public class CustomInjectionProviderTest
 {
   @ObjectUnderTest
   private CustomInjectionTestComponent component;

@@ -30,7 +30,7 @@ public class PostConstructTest
 
   // Add CustomInjectionAnnotation1 as post construct life cycle annotation, @PostConstruct is already added by default
   @RegisterExtension
-  private static final NeedleExtension needleExtension = new NeedleExtension()
+  public static final NeedleExtension needleExtension = new NeedleExtension()
   {
     protected void configure()
     {

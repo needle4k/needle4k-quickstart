@@ -17,6 +17,7 @@ import jakarta.inject.Inject;
 /**
  * Example for custom injection provider for "qualified" CDI component injection
  */
+@SuppressWarnings("CdiInjectionPointsInspection")
 public class QualifierTest
 {
   private static final User USER = new User("heinz");

@@ -24,7 +24,7 @@ import jakarta.persistence.PersistenceContext;
 public class DerbyDBTest
 {
   @RegisterExtension
-  private static final JPANeedleExtension needleExtension = new JPANeedleExtension()
+  public static final JPANeedleExtension needleExtension = new JPANeedleExtension()
   {
     protected void configure()
     {
